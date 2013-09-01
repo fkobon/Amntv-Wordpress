@@ -1,0 +1,1194 @@
+/*
+Theme Name: AMN TV
+Theme URI: http://africaincorp.tv
+Description: Theme wordpress pour AMN TV. Basé sur HTML5 reset et yaml
+Author: Jean Luc Houedanou
+Author URI: http://houedanou.com
+Version: 1
+*/
+
+    .flexible {
+    max-width: 100%;
+    height:auto;
+    }
+    /* IE6 support - 2% space for borders */
+    * html .flexible { width: 100%;
+        height:auto;
+}
+
+        .bordered {
+        border: 2px #eee solid;
+    border: 2px rgba(255,255,255,1) solid;
+    box-shadow: 0 0 3px rgba(0,0,0,.25);
+    }
+@font-face {
+    font-family: 'bree_serifregular';
+    src: url('fonts/breeserif-regular-webfont.eot');
+    src: url('fonts/breeserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/breeserif-regular-webfont.woff') format('woff'),
+         url('fonts/breeserif-regular-webfont.ttf') format('truetype'),
+         url('fonts/breeserif-regular-webfont.svg#bree_serifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('fonts/opensans-light-webfont.eot');
+    src: url('fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-light-webfont.woff') format('woff'),
+         url('fonts/opensans-light-webfont.ttf') format('truetype'),
+         url('fonts/opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/opensans-regular-webfont.eot');
+    src: url('fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/opensans-regular-webfont.woff') format('woff'),
+         url('fonts/opensans-regular-webfont.ttf') format('truetype'),
+         url('fonts/opensans-regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers.
+   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+@media screen and (max-width: 800px) {
+
+       /*break du menu | pour le responsive design*/
+        .nav > li {
+        float: none;
+    }
+    .nav ul {
+        display: block;
+        width: 100% !important;
+
+    }
+   .nav > li.hover > ul , .nav li li.hover ul {
+        position: static;
+    }
+
+}
+
+body {    font: 13px 'open_sanslight';}
+
+/* using local fonts? make sure to read up on Paul Irish's
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;}
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+ a.more-link{
+     display:block !important;
+   background: none repeat scroll 0 0 #E75423 !important;
+-webkit-border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+color: #FFFFFF !important;
+display: block !important;
+float: right;
+font-size: 10px;
+text-decoration:none !important;
+margin: 10px 0 0;
+padding: 1px 7px !important;
+position: relative;
+text-shadow: 1px 1px 0 #A33612;
+ }
+    @media screen and ( max-width: 1024px ) {
+    /* linearization for grid module */
+    .linearize-level-1,
+    .linearize-level-1 > [class*="ym-g"],.linearize-level-1 >*, .linearize-level-1 >li>*{
+    display: block;
+    float: none;
+    padding: 0;
+    text-align:center;
+    margin: 0;
+    width: 100% !important;
+    }
+    /* reset defined gutter values */
+    .linearize-level-1 > [class*="ym-g"] > [class*="ym-gbox"] {
+    overflow: hidden; /* optional for containing floats */
+    padding: 0;
+    margin: 0;
+    }
+    }
+    .ym-wrapper {
+			width:100%;
+			text-align:center;
+			height:auto;
+			position:relative:
+    }
+    .ym-wbox {
+    		padding: 10px;
+    		max-width:1016px;
+    		height:auto;
+    		position:relative;
+    		margin:0 auto}
+/*header*/
+.blogdescription{
+    	    letter-spacing: -1px;
+font-family: 'bree_serifregular';
+    color:#C7D1D5;
+    text-shadow:#FFF 1px 1px 0px;
+}
+#header{
+	  /***  CSS Gradient  ***/
+  /*  Chrome 1-9 and Safari 4-5.0  */
+  background-image: -webkit-gradient(linear, left top, left bottom,
+        color-stop( 0.0, rgb(253, 253, 253) ),
+        color-stop( 1.0, rgb(214, 216, 226) ));
+
+  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+  background-image: -webkit-linear-gradient(top,
+        rgb(253, 253, 253),
+        rgb(214, 216, 226) );
+
+  /*  Firefox 3.6+  */
+  background-image: -moz-linear-gradient(top,
+        rgb(253, 253, 253),
+        rgb(214, 216, 226) );
+
+  /*  IE 10+  */
+  background-image: -ms-linear-gradient(top,
+        rgb(253, 253, 253),
+        rgb(214, 216, 226) );
+
+  /*  Opera 11.10+  */
+  background-image: -o-linear-gradient(top,
+        rgb(253, 253, 253),
+        rgb(214, 216, 226) );
+
+  /*  W3C  */
+  background-image: linear-gradient(top,
+        rgb(253, 253, 253),
+        rgb(214, 216, 226) );
+
+width:100%;
+position:relative;
+border-bottom:1px solid white
+}
+.toggleMenu{
+	display:none
+}
+#indexwrapper{
+	background:#303030;}
+	#indexinner{
+		text-align:left !important
+	}
+#logo{
+  display: inline-block;
+  height: 70px;
+  text-align:left;
+  position:relative
+}
+#logo a{
+  background: url(images/all.png) 0px -18px no-repeat;
+	width: 245px;
+  height: 50px;
+  display:block;
+}
+#headerdeco{
+	background: url(images/all.png) 0px -9px no-repeat;
+display: inline-block;
+font-size: 17px;
+height: 7px !important;
+padding: 0 0 0 0;
+text-indent: -1000000px;}
+/* Main Navigation -------------- */
+.toggleMenu {
+    display:  none;
+    width:50%;
+  /***  CSS Gradient  ***/
+  /*  Chrome 1-9 and Safari 4-5.0  */
+  background-image: -webkit-gradient(linear, left top, left bottom,
+        color-stop( 0.0, rgb(205, 207, 220) ),
+        color-stop( 1.0, rgb(248, 248, 249) ));
+
+  /*  Chrome 10+ Safari 5.1+ Mobile Safari  */
+  background-image: -webkit-linear-gradient(top,
+        rgb(205, 207, 220),
+        rgb(248, 248, 249) );
+
+  /*  Firefox 3.6+  */
+  background-image: -moz-linear-gradient(top,
+        rgb(205, 207, 220),
+        rgb(248, 248, 249) );
+
+  /*  IE 10+  */
+  background-image: -ms-linear-gradient(top,
+        rgb(205, 207, 220),
+        rgb(248, 248, 249) );
+
+  /*  Opera 11.10+  */
+  background-image: -o-linear-gradient(top,
+        rgb(205, 207, 220),
+        rgb(248, 248, 249) );
+
+  /*  W3C  */
+  background-image: linear-gradient(top,
+        rgb(205, 207, 220),
+        rgb(248, 248, 249) );
+    font-family: 'bree_serifregular';
+    text-decoration: none;
+    color:#202827 !important;
+    font-weight: 100 !important;
+    margin:10px 0 20px 0;
+    border:1px solid #D5D5D5 !important;
+    padding: 5px;}
+.toggleMenu:hover{
+	-webkit-box-shadow: #D21BF5 0px 0px 4px;
+	        box-shadow: #D21BF5 0px 0px 4px;
+}
+.nav {
+    list-style: none;
+     *zoom: 1;
+	height:auto;
+	position:relative;
+	z-index:10;
+    margin:0;
+	max-width:853px;
+
+}
+.nav:before,
+.nav:after {
+    content: " ";
+    display: table;
+}
+.nav:after {
+    clear: both;
+}
+.nav ul {
+    list-style: none;
+    width:200px;
+
+}
+.nav a {
+    padding: 5px;
+    color:#fff;
+    *zoom: 1;
+}
+.nav > li {
+	float:left;
+	margin:0;
+	text-align:left;
+	position:relative;
+
+}
+.nav > li > a , ul.nav li ul li a{
+		color: #C7D1D5;
+		display: block;
+			border-left:#C7D1D5 1px solid;
+	min-height:68px;
+	  padding:0px 5px;
+		font-family: 'bree_serifregular';
+		font-size: 15px !important;
+		font-weight: 100 !important;
+		line-height: 17px;
+		text-decoration: none;
+		text-shadow: 0 1px 1px #FFFFFF !important;
+		width: 99px;
+}
+
+li.current-menu-item a{
+        color:#FF672B ;
+        /*text-shadow:#000 1px 1px 0px !important*/
+}
+.nav li ul {
+	margin:0 !important;
+    position: absolute;
+    left: -9999px;
+/*	border:1px solid #D5D5D5; */
+	z-index: 100;
+}
+
+.nav li li a {
+    display: block;
+    margin:0px !important;
+    position: relative;
+    z-index:100;
+}
+ ul.nav li ul li{
+ 	text-align:left;
+}
+/* .nav li li li a {
+  background:url("images/textbg_r2_c2.gif") repeat scroll 0 0 #FFFFFF;
+    z-index:200;
+    border-top:4px solid #1d7a62;
+}
+ul.nav li ul li a,ul.nav li ul li a:hover{
+      background:url("images/textbg_r2_c2.gif") repeat scroll 0 0 #FFFFFF !important;
+} */
+
+.nav li li li a {
+    z-index:200;
+    border-top:2px solid #1d7a62;
+	padding-left:20px;
+}
+ul.nav li ul li a,ul.nav li ul li a:hover{
+      text-decoration: none !important;
+}
+
+.nav li {
+	margin:0;
+    position: relative;
+}
+.nav > li.hover > ul {
+    left: 0;
+}
+.nav li li.hover ul {
+    left: 100%;
+    top: 0;
+}
+.nav > li > .parent{
+}
+.nav > li > a:hover{
+	color:#F514FA !important;
+	border-left:#F514FA 1px solid
+	}
+ul#menu-menu.nav li:first-child a{
+	border-left:none !important;
+	background: url(images/all.png) -442px -18px no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 36px;}
+/*index*/
+#indexwrapper{
+	height:auto;
+  padding:10px 0;
+	color:#FFF !important
+}
+/*categories*/
+
+.cattitle{
+  font-family: 'bree_serifregular';
+  text-transform:uppercase;
+  font-size:48px;
+  height:53px;
+  position:relative;
+  font-weight:normal;
+  color:#C0C0C0}
+  #vidmain{
+    position:relative;
+  }
+  #videoimag1 .ym-gbox{
+    padding:0 10px 0 0px !important;
+    position:relative;
+  }
+div#videoimag1.ym-gl div.ym-gbox article#vidmain a img,div#videoimg2.ym-gr article.vidsec div.ym-wbox a img{
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  /* IE 5-7 */
+  filter: alpha(opacity=50);
+  /* Netscape */
+  -moz-opacity: 0.5;
+  /* Safari 1.x */
+  -khtml-opacity: 0.5;
+  /* Good browsers */
+  opacity: 0.5;
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+div#videoimag1.ym-gl div.ym-gbox article#vidmain a img:hover,div#videoimg2.ym-gr article.vidsec div.ym-wbox a img:hover{
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  /* IE 5-7 */
+  filter: alpha(opacity=100);
+  /* Netscape */
+  -moz-opacity: 1;
+  /* Safari 1.x */
+  -khtml-opacity: 1;
+  /* Good browsers */
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+div#videoimg1,div#videoimg2{
+  text-align:center;
+  overflow:hidden;
+  height:auto;
+  position:relative
+}
+.infos{
+  position:absolute;
+    background: url("images/w1h1r0g0b0a105.png") repeat scroll 0 0 transparent;
+    width: inherit;
+    z-index: 100;
+}
+.infossec{
+    position:absolute;
+    background: url("images/w1h1r0g0b0a105.png") repeat scroll 0 0 transparent;
+    width: inherit;
+    z-index: 100;
+}
+.infosbix,.infosbix2{
+    position:absolute;
+  background: url("images/w1h1r0g0b0a105.png") repeat scroll 0 0 transparent;
+  bottom:0;
+    width: inherit;
+    z-index: 100;
+}
+#vfeatured{
+  width:400px !important;
+}
+.vall{
+  position:relative;
+  background:transparent;
+  width:182px;
+  margin:2px !important;
+}
+.vidsec{
+  position:relative}
+  .abox{
+    padding:2px;
+  }
+/*footer*/
+.menufoot ul{
+	margin:0px !important
+}
+.menufoot ul li{
+ 	margin:0px !important
+
+}
+#footerdeco{
+	background: url(images/all.png) 0px 0px no-repeat;s
+  display: inline-block;
+  height: 7px !important}
+.cwedits{
+	    font-family: 'bree_serifregular';
+	border-top:#C7D1D5 1px solid;
+	font-size:11px;
+	padding:5px 0;
+	text-transform:uppercase;
+	font-family: #9B9B9B !important
+}
+.cwedits a{
+	color:#9B9B9B !important;
+	text-decoration:none
+}
+#logofooter{
+ height:auto;
+ position:relative;
+ min-height:100px
+}
+div#logofooter a{
+	display:block;
+	background: url(images/all.png) -247px -18px no-repeat white;
+  width:auto;
+  max-width:194px;
+  height: 49px;
+}
+#logofooter .blogdescription{
+	color:#D7D7D7 !important
+}
+.nappa{
+	color:#202827;
+	    font-family: 'bree_serifregular';
+	    font-size:15px;
+	    font-weight:normal;
+	    letter-spacing: -1px;
+	    text-transform:uppercase
+}
+.menufoot{
+	text-align:left;
+}
+.menufoot .ym-gbox{
+	border-left:#C7D1D5 1px solid;
+	min-height:150px;
+}
+div.menu-menu-container ul.menu li.menu-item{
+	line-height:15px;
+}
+.menufoot div.ym-gbox div ul li a{
+	font-size:11px;
+	color:#000;
+	text-decoration:none
+}
+.menufoot div.ym-gbox div ul li a:hover{
+	color:#D21BF5;
+}
+.post {}
+
+.entry-content {}
+.entry-content a {}
+.entry-content a:hover {}
+
+#meta {}
+.postmetadata {}
+
+#sidebar {}
+
+.navgation {}
+.next-posts {}
+.prev-posts {}
+
+#searchform {}
+#s {}
+#searchsubmt {}
+
+ol.commentlist {list-style: none;}
+ol.commentlist li {}
+ol.commentlist li.alt {}
+ol.commentlist li.bypostauthor {}
+ol.commentlist li.byuser {}
+ol.commentlist li.comment-author-admin {}
+ol.commentlist li.comment {border-bottom: 1px dotted #666; padding: 10px;}
+ol.commentlist li.comment div.comment-author {}
+ol.commentlist li.comment div.vcard {}
+ol.commentlist li.comment div.vcard cite.fn {font-style: normal;}
+ol.commentlist li.comment div.vcard cite.fn a.url {}
+ol.commentlist li.comment div.vcard img.avatar {float:right; margin: 0 0 10px 10px;}
+ol.commentlist li.comment div.vcard img.avatar-32 {}
+ol.commentlist li.comment div.vcard img.photo {}
+ol.commentlist li.comment div.vcard span.says {}
+ol.commentlist li.comment div.commentmetadata {}
+ol.commentlist li.comment div.comment-meta {font-size: 10px;}
+ol.commentlist li.comment div.comment-meta a {color: #ccc;}
+ol.commentlist li.comment p {}
+ol.commentlist li.comment ul {}
+ol.commentlist li.comment div.reply {font-size: 11px;}
+ol.commentlist li.comment div.reply a {font-weight: bold;}
+ol.commentlist li.comment ul.children {list-style: none; margin: 10px 0 0;}
+ol.commentlist li.comment ul.children li {}
+ol.commentlist li.comment ul.children li.alt {}
+ol.commentlist li.comment ul.children li.bypostauthor {}
+ol.commentlist li.comment ul.children li.byuser {}
+ol.commentlist li.comment ul.children li.comment {}
+ol.commentlist li.comment ul.children li.comment-author-admin {}
+ol.commentlist li.comment ul.children li.depth-2 {border-left: 5px solid #555; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-3 {border-left: 5px solid #999; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-4 {border-left: 5px solid #bbb; margin: 0 0 10px 10px;}
+ol.commentlist li.comment ul.children li.depth-5 {}
+ol.commentlist li.comment ul.children li.odd {}
+ol.commentlist li.even {background: #fff;}
+ol.commentlist li.odd {background: #f6f6f6;}
+ol.commentlist li.parent {border-left: 5px solid #111;}
+ol.commentlist li.thread-alt {}
+ol.commentlist li.thread-even {}
+ol.commentlist li.thread-odd {}
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+
+
+}
+
+@media all and (orientation: portrait) {
+
+}
+
+@media all and (orientation: landscape) {
+
+}
+/**
+ * "Yet Another Multicolumn Layout" - YAML CSS Framework
+ *
+ * (en) YAML core stylesheet
+ * (de) YAML Basis-Stylesheet
+ *
+ * Don't make any changes in this file!
+ * Your changes should be placed in any css-file in your own stylesheet folder.
+ *
+ * @copyright       Copyright 2005-2012, Dirk Jesse
+ * @license         CC-BY 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-CDL (http://www.yaml.de/license.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         v4.0.2
+ * @revision        $Revision: 743 $
+ * @lastmodified    $Date: 2012-10-23 23:01:14 +0200 (Di, 23 Okt 2012) $
+ */
+
+@media all {
+
+	/**
+	* @section CSS-Normalisation Module
+	*/
+
+	/* (en) Global reset of paddings and margins for all HTML elements */
+	/* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
+	* { margin:0; padding:0; }
+
+	/* (en) Correction:margin/padding reset caused too small select boxes. */
+	/* (de) Korrektur:Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
+	option { padding-left:0.4em; } /* LTR */
+	select { padding:1px; }
+
+	/**
+	* (en) Global fix of the Italics bugs in IE 5.x and IE 6
+	* (de) Globale Korrektur des Italics Bugs des IE 5.x und IE 6
+	*
+	* @bugfix
+	* @affected   IE 5.x/Win, IE6
+	* @css-for    IE 5.x/Win, IE6
+	* @valid      yes
+	*/
+	* html body * { overflow:visible; }
+
+	body {
+		/* (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser */
+		/* (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgrößen in älteren Opera Versionen */
+		font-size:100%;
+
+		/* (en) Standard values for colors and text alignment */
+		/* (de) Vorgabe der Standardfarben und Textausrichtung */
+		background:#fff;
+		color:#000;
+		text-align:left; /* LTR */
+	}
+
+	/* (en) avoid visible outlines on DIV containers in Webkit browsers */
+	/* (de) Vermeidung sichtbarer Outline-Rahmen in Webkit-Browsern */
+	div:target { outline:0 none; }
+
+	/* (en) HTML 5 - adjusting visual formatting model to block level */
+	/* (en) HTML 5 - Anpassung des visuellen Formatmodells auf Blockelemente */
+	article,aside,details,figcaption,figure,
+	footer,header,hgroup,nav,section {
+		display:block;
+	}
+
+	/* (en) HTML5 - default media element styles */
+	/* (de) HTML5 - Standard Eigenschaften für Media-Elemente */
+	audio,
+	canvas,
+	video {
+		display: inline-block;
+	}
+
+	/* (en) HTML5 - don't show <audio> element if there aren't controls */
+	/* (de) HTML5 - <audio> ohne Kontrollelemente sollten nicht angezeigt werden */
+	audio:not([controls]) {
+		display: none;
+	}
+
+	/* (en) HTML5 - add missing styling in IE & old FF for hidden attribute  */
+	/* (de) HTML5 - Eigenschaften für das hidden-Attribut in älteren IEs und FF nachrüsten */
+	[hidden] {
+		display: none;
+	}
+
+	/* (en) force consistant appearance of input[type="search"] elements in all browser  */
+	/* (de) Einheitliches Erscheinungsbild für input[type="search"] Elemente erzwingen  */
+	input[type="search"] {
+		-webkit-appearance: textfield;
+	}
+	input[type="search"]::-webkit-search-decoration {
+		-webkit-appearance: none;
+	}
+
+	/* (en) Clear borders for <fieldset> and <img> elements */
+	/* (de) Rahmen für <fieldset> und <img> Elemente löschen */
+	fieldset, img { border:0 solid; }
+
+	/* (en) new standard values for lists, blockquote, cite and tables */
+	/* (de) Neue Standardwerte für Listen, Zitate und Tabellen */
+	ul, ol, dl { margin:0 0 1em 1em; } /* LTR */
+	li {
+		line-height:1.5em;
+		margin-left:0.8em; /* LTR */
+	}
+
+	dt { font-weight:bold; }
+	dd { margin:0 0 1em 0.8em; } /* LTR */
+
+	blockquote { margin:0 0 1em 0.8em; } /* LTR */
+	q { quotes: none; }
+
+	blockquote:before, blockquote:after,
+	q:before, q:after { content: ''; content:none }
+
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+
+ 	/**
+	* @section Float Handling Module
+	*/
+
+	/* (en) clearfix method for clearing floats */
+	/* (de) Clearfix-Methode zum Clearen der Float-Umgebungen */
+	.ym-clearfix:before {
+		content:"";
+		display:table;
+	}
+	.ym-clearfix:after {
+		clear:both;
+		content:".";
+		display:block;
+		font-size:0;
+		height:0;
+		visibility:hidden;
+	}
+
+	/* (en) alternative solutions to contain floats */
+	/* (de) Alternative Methoden zum Einschließen von Float-Umgebungen */
+	.ym-contain-dt { display:table; width: 100%; overflow: visible; }
+	.ym-contain-oh { overflow:hidden; width:100%; display:block; }
+	.ym-contain-fl { float:left; width:100%; }
+
+	/**
+	* @section Accessibility Module
+	*
+	* (en) skip links and hidden content
+	* (de) Skip-Links und versteckte Inhalte
+	*/
+
+	/* (en) classes for invisible elements in the base layout */
+	/* (de) Klassen für unsichtbare Elemente im Basislayout */
+	.ym-skip,
+	.ym-hideme,
+	.ym-print {
+		position:absolute;
+		top:-32768px;
+		left:-32768px; /* LTR */
+	}
+
+	/* (en) make skip links visible when using tab navigation */
+	/* (de) Skip-Links für Tab-Navigation sichtbar schalten */
+	.ym-skip:focus,
+	.ym-skip:active {
+		position:static;
+		top:0;
+		left:0;
+	}
+
+	/* skiplinks:technical setup */
+	.ym-skiplinks {
+		position:absolute;
+		top:0px;
+		left:-32768px;
+		z-index:1000;
+		width:100%;
+		margin:0;
+		padding:0;
+		list-style-type:none;
+	}
+
+	.ym-skiplinks .ym-skip:focus,
+	.ym-skiplinks .ym-skip:active {
+		left:32768px;
+		outline:0 none;
+		position:absolute;
+		width:100%;
+	}
+}
+
+@media screen, projection {
+
+	/**
+	* @section Column Module
+	*
+	* default column config:
+	* |-------------------------------|
+	* | col1    | col3      | col2    |
+	* | 20%     | flexible  | 20%     |
+	* |-------------------------------|
+	*/
+
+	.ym-column { display:table; width:100%; }
+
+	.ym-col1 { float:left; width:20%; }
+	.ym-col2 { float:right; width:20%; }
+	.ym-col3 { width:auto; margin:0 20%; }
+
+	.ym-cbox { padding: 0 10px }
+	.ym-cbox-left { padding: 0 10px 0 0 }
+	.ym-cbox-right { padding: 0 0 0 10px }
+
+	/* (en) IE-Clearing:Only used in Internet Explorer, switched on in iehacks.css */
+	/* (de) IE-Clearing:Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
+	.ym-ie-clearing { display:none; }
+
+	/**
+	* @section Grid Module
+	*
+	*/
+
+	.ym-grid {
+		display:table;
+		width:100%;
+		table-layout:fixed;
+		list-style-type: none;
+		padding-left:0;
+		padding-right:0;
+		margin-left:0;
+		margin-right:0;
+	}
+
+	.ym-gl { float:left; margin: 0; }
+	.ym-gr { float:right; margin: 0 0 0 -5px; }
+
+	.ym-g20 { width:20%; }
+	.ym-g40 { width:40%; }
+	.ym-g60 { width:60%; }
+	.ym-g80 { width:80%; }
+	.ym-g25 { width:25%; }
+	.ym-g33 { width:33.333%; }
+	.ym-g50 { width:50%; }
+	.ym-g66 { width:66.666%; }
+	.ym-g75 { width:75%; }
+	.ym-g38 { width:38.2%; }
+	.ym-g62 { width:61.8%; }
+
+	.ym-gbox { padding: 0 10px }
+	.ym-gbox-left { padding: 0 10px 0 0 }
+	.ym-gbox-right { padding: 0 0 0 10px }
+
+	.ym-equalize { overflow:hidden; }
+
+	.ym-equalize > [class*="ym-g"] {
+		display:table-cell;
+		float:none;
+		margin:0;
+		vertical-align:top;
+	}
+
+	.ym-equalize > [class*="ym-g"] > [class*="ym-gbox"] {
+		padding-bottom: 10000px;
+		margin-bottom: -10000px
+	}
+}
+
+@media all {
+
+   /**
+	* @section Form Module
+	*
+	* Vertical-Forms - technical base (standard)
+	*
+	* |-------------------------------|
+	* | form                          |
+	* |-------------------------------|
+	* |   label                       |
+	* |   input / select / textarea   |
+	* |-------------------------------|
+	* | /form                         |
+	* |-------------------------------|
+	*
+	* (en) Styling of forms where both label and input/select/textarea are styled with display:block;
+	* (de) Formulargestaltung, bei der sowohl label als auch input/select/textarea mit display:block; gestaltet werden
+	*/
+
+	.ym-form,
+	.ym-form fieldset { overflow:hidden; }
+
+	.ym-form div { position:relative; }
+
+	.ym-form label,
+	.ym-form .ym-message {
+		position:relative;
+		display:block; /* important for Safari */
+	}
+
+	.ym-form .ym-fbox-check label {
+		display:inline;
+	}
+
+	.ym-form input,
+	.ym-form textarea { cursor:text; }
+
+	.ym-form input[type="checkbox"],
+	.ym-form input[type="radio"],
+	.ym-form select,
+	.ym-form label { cursor:pointer; }
+
+	/* small adjustments for Internet Explorer - all versions */
+	.ym-form textarea { overflow: auto; }
+
+	/* Hiding of hidden fields (otherwise ugly spaces in Firefox) | Versteckte Felder wirklich verstecken (sonst ggf. häßliche Lücken im Firefox) */
+	.ym-form input[type=hidden] { display:none !important; }
+
+	/* styling containing DIV elements | Gestaltung der kapselnden DIV-Elemente */
+	.ym-form .ym-fbox-text:before,
+	.ym-form .ym-fbox-select:before,
+	.ym-form .ym-fbox-check:before,
+	.ym-form .ym-fbox-button:before {
+		content:"";
+		display:table;
+	}
+
+	.ym-form .ym-fbox-text:after,
+	.ym-form .ym-fbox-select:after,
+	.ym-form .ym-fbox-check:after,
+	.ym-form .ym-fbox-button:after {
+		clear:both;
+		content:".";
+		display:block;
+		font-size:0;
+		height:0;
+		visibility:hidden;
+	}
+
+	/* styling standard form elements with 'almost' equal flexible width | Gestaltung der einzelnen Formularelemente mit annähend gleicher Breite */
+	.ym-form select,
+	.ym-form input,
+	.ym-form textarea {
+		display:block;
+		position:relative;
+		width:58.5%;
+	}
+
+	.ym-form .ym-fbox-check input {
+		display: inline;
+		width: auto;
+	}
+
+	/* Styling of buttons | Gestaltung von Buttons */
+	.ym-form .ym-fbox-button input {
+		display: inline;
+		overflow:visible;  /* Fixes IE7 auto-padding bug */
+		width:auto;
+	}
+
+	/* avoid jumping checkboxes & radiobuttons in IE8 */
+	.ym-form .ym-fbox-check input:focus,
+	.ym-form .ym-fbox-check input:hover,
+	.ym-form .ym-fbox-check input:active {
+		border:0 none;
+	}
+
+	/* Indent Checkbox fields to match label-width | Checkboxen um den gleichen Wert einrücken, wie die Breite der labels */
+
+	.ym-full .ym-fbox-select select,
+	.ym-full .ym-fbox-text input,
+	.ym-full .ym-fbox-text textarea {
+		width:94.2%;
+		margin-right: -3px;
+	}
+
+   /**
+	* Columnar forms display - technical base (optional)
+	*
+	* |-------------------------------------------|
+	* | form                                      |
+	* |-------------------------------------------|
+	* |                                           |
+	* |   label   |   input / select / textarea   |
+	* |                                           |
+	* |-------------------------------------------|
+	* | /form                                     |
+	* |-------------------------------------------|
+	*
+	* (en) Styling of forms where label floats left of form-elements
+	* (de) Formulargestaltung, bei der die label-Elemente nach links fließen
+	*/
+
+	/* Columnar display | Spalten-Darstellung */
+	.ym-columnar .ym-fbox-text label,
+	.ym-columnar .ym-fbox-select label {
+		display:inline;
+		float:left;
+		width:30%; /* Can be fixed width too | Kann auch eine fixe Angabe sein */
+	}
+	.ym-columnar .ym-fbox-check {
+		position:relative;
+	}
+
+	.ym-label { display:block; }
+	.ym-columnar .ym-fbox-check .ym-label {
+		position:absolute;
+		top:0;
+	}
+
+	/* Indent Checkbox fields to match label-width | Checkboxen um den gleichen Wert einrücken, wie die Breite der labels */
+	.ym-columnar .ym-fbox-check input,
+	.ym-columnar .ym-error .ym-message {
+		margin-left:30%;
+	}
+
+	/* global and local columnar settings for button alignment */
+	.ym-columnar fieldset .ym-fbox-button,
+	fieldset.ym-columnar .ym-fbox-button {
+		padding-left:30%;
+	}
+
+	.ym-columnar .ym-fbox-select select,
+	.ym-columnar .ym-fbox-text input,
+	.ym-columnar .ym-fbox-text textarea {
+		float:left;
+		width:67.2%;
+		margin-right: -3px;
+	}
+
+	/**
+	* @section Form Construction Kit | Screen Adjustments
+	*
+	*/
+
+	.ym-fbox-select select { width:60%; }
+	.ym-full .ym-fbox-select select { width:94.8%; }
+	.ym-columnar .ym-fbox-select select { width:68.8%; }
+}
+
+@media print {
+
+	/**
+	* @section print adjustments for core modules
+	*
+	* (en) float clearing for subtemplates. Uses display:table to avoid bugs in FF & IE
+	* (de) Float Clearing für die Subtemplates. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
+	*
+	* @bugfix
+	* @since     3.0
+	* @affected  FF2.0, FF3.0, IE7
+	* @css-for   all browsers
+	* @valid     yes
+	*/
+
+	.ym-grid > .ym-gl,
+	.ym-grid > .ym-gr {
+		overflow:visible;
+		display:table;
+	}
+
+	/* (en) make .ym-print class visible */
+	/* (de) .ym-print-Klasse sichtbar schalten */
+	.ym-print {
+		position:static;
+		left:0;
+	}
+
+	/* (en) generic class to hide elements for print */
+	/* (de) Allgemeine CSS Klasse, um beliebige Elemente in der Druckausgabe auszublenden */
+	.ym-noprint {
+		display:none !important;
+	}
+}

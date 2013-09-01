@@ -1,0 +1,48 @@
+.amntvindex_10 {
+  background: url(all.png) 0px -70px no-repeat;
+  display: inline-block;
+  width: 63px;
+  height: 156px;
+}
+
+.amntvindex_13 {
+  background: url(all.png) -65px -70px no-repeat;
+  display: inline-block;
+  width: 61px;
+  height: 154px;
+}
+
+.deco {
+  background: url(all.png) 0px -9px no-repeat;
+  display: inline-block;
+  width: 1277px;
+  height: 7px;
+}
+
+.frisfoot {
+  background: url(all.png) 0px 0px no-repeat;
+  display: inline-block;
+  width: 1280px;
+  height: 7px;
+}
+
+.home {
+  background: url(all.png) -442px -18px no-repeat;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}
+
+.logo {
+  background: url(all.png) 0px -18px no-repeat;
+  display: inline-block;
+  width: 245px;
+  height: 50px;
+}
+
+.logofoot {
+  background: url(all.png) -247px -18px no-repeat;
+  display: inline-block;
+  width: 193px;
+  height: 49px;
+}
