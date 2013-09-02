@@ -8,8 +8,7 @@
         </h3>
         <div id="page1" class="slide ym-grid linearize-level-1">
               <!--video a mettre en emphase-->
-            <div id="vfeatured" class="vall">
-              <div class="ym-gbox">
+            <div id="vfeatured" class="vall ym-gl">
                 <?php
                 $catID = get_query_var('cat');
                   query_posts(array('showposts'=>1,
@@ -39,17 +38,16 @@
                   </article>
                   <?php $compteur[] = get_the_ID();?>
                 <?php endwhile; ?>
-                </div><!--ym-gbox-->
             </div><!--videoimg1-->
               <!--4 autres videos-->
                 <?php
                   $compteur2 = array();
-                  query_posts(array('showposts'=>8,
+                  query_posts(array('showposts'=>4,
                     'cat' => $catID,
                   'post__not_in' => $compteur));
                   while (have_posts()) : the_post();
                 ?>
-                  <div class="abox vall">
+                  <div class="vall abx  ym-gl">
                       <div class="infossec">
                         <p>
                         <?php the_date(); ?>
@@ -71,8 +69,9 @@
                     </div><!--abox-->
                         <?php endwhile; ?>
         </div><!--page1-->
+                  <?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
+
   </div><!--indexinner-->
 </div><!--indewrapper-->
-          <?php include (TEMPLATEPATH . '/_/inc/nav.php' ); ?>
 
 <?php get_footer(); ?>

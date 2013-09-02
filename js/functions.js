@@ -34,13 +34,13 @@ var adjustMenu = function() {
 
 /* trigger when page is ready */
 $(document).ready(function (){
-$('div#page1').isotope({
-  // options
-  itemSelector : 'div#page1.slide div.vall',
-  layoutMode : 'fitRows'
-});
+$(".abx").hover(function(){
+     $(this).children('.infossec').fadeIn(100);
 
-  $('ul#menu-menu.nav li:first-child a').html('');
+    },function(){
+      $(this).children('.infossec').fadeOut(100);
+});
+  $('ul#menu-navbar.nav li:first-child a').html('');
   $(".nav li a").each(function() {
       if ($(this).next().length > 0) {
         $(this).addClass("parent");

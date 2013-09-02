@@ -48,10 +48,37 @@
         2013 <a href="http://africaincorpmedia.co">Africaincorp Media Network</a> | Template par <a href="http://houedanou.com" rel="dofollow">Jean Luc Houedanou</a>
       </div>
 		</footer>
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery.isotope.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
+    <?php if( is_front_page() ) { ?>
+        <div id="video-controls" >
+          <a href="#" class="tubular-play black-85"><span class="fui-play"></span></a><br />
+           <a href="#" class="tubular-pause black-85"><span class="fui-pause"></span></a><br />
+           <a href="#" class="tubular-volume-up  black-85"><span class="fui-volume"></span></a><br />
+           <a href="#" class="tubular-mute  black-85"><span class="fui-cross"></span></a></p>
+      </div>
+      <?php } ?>
 	<?php wp_footer(); ?>
+  <?php if( is_front_page() ) { ?>
+  <script src="<?php bloginfo('template_directory'); ?>/js/jquery.tubular.1.0.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.cycle.min.js"></script>
+<script type="text/javascript">
+    $('document').ready(function() {
+          $('div#indexinner.ym-wbox').cycle({
+                fx: 'scrollHorz',
+                  speed: 1000,
+                  timeout: 5000,
+                  pager:'#fiv',
+                   slideResize: false
+              });
+            //inserer video oco
+           var options = { videoId: 'ksfBt5TL4ms', start: 0,increaseVolumeBy: 10};
+            $('#contenuwrapper').tubular(options);
+            // f-UGhWj1xww cool sepia hd
+            // 49SKbS7Xwf4 beautiful barn sepia
+          });
 
+  </script>
+<?php } ?>
+<script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
 
 <!-- here comes the javascript -->
 
@@ -74,7 +101,8 @@
 
 </script>
 -->
-
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</div><!--contenwrapper-->
 </body>
 
 </html>

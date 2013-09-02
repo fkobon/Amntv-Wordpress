@@ -87,10 +87,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="contenuwrapper">
 		<header id="header" class="ym-wrapper">
 			<div id="headerdeco" class="ym-wrapper">
-				.
-      </div>
+				Africaincorp Media Network TV
+			</div>
 			<div id="headerinner" class="ym-wbox">
 				<div id="gridheader" class="ym-grid linearize-level-1">
 					<div id="logo" class="ym-g25 ym-gl">
@@ -103,9 +104,7 @@
                     wp_nav_menu( array( 'menu' => 'menu','walker' => new MV_Cleaner_Walker_Nav_Menu(),'menu_class' => 'nav linearize-level-1'));
                   ?>
           <!--nav-->
-        </div><!--navabar-inner -->
-					</div>
-
+        				</div><!--menu -->
 				</div><!--grid header-->
 			</div><!--headeriinner-->
 		</header>
